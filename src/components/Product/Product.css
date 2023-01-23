@@ -1,5 +1,6 @@
 .productContainer {
     position: relative;
+    margin-bottom: 36px;
 }
 
 .product {
@@ -152,7 +153,6 @@ p {
     font-size: 12.8px;
     line-height: 95%;
     justify-content: center;
-
 }
 
 .product.notAvailable {
