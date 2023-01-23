@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'exo_2.0_thin';
+  font-style: normal;
+  src: local('exo_2.0_thin'),
+      url("./fonts/exo2.0_thin.otf") format("opentype");   
+}
+
+@font-face {
+  font-family: 'trebuchet_ms';
+  font-style: normal;
+  src: local('trebuchet_ms'),
+      url("./fonts/trebuchet_ms.ttf") format("truetype");   
+}
+
+@font-face {
+  font-family: 'trebuchet_ms_bold';
+  font-style: bold;
+  src: local('trebuchet_ms_bold'),
+      url("./fonts/trebuchet_ms_bold.ttf") format("truetype");   
+}
+
+body {
+  margin: 0;
+  font-family: 'trebuchet_ms', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/background.png);
+  background-size: 1280px;
+  background-position: 10% 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media (max-width: 1024px) {
+  .body {
+      flex-wrap: wrap;
+      width: 1024px
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+      flex-wrap: wrap;
+      width: 480px
+  }
+}

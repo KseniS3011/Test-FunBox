@@ -1,0 +1,228 @@
+.productContainer {
+    position: relative;
+}
+
+.product {
+    position: relative;
+    z-index: 2;
+    width: 312px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(42px 0%, 100% 0, 100% 30px, 100% 100%, 0% 100%, 0 42px);
+    border-radius: 3%;
+    box-sizing: border-box;
+    padding: 24px 16px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.productBorder {
+    top: -4px;
+    left: -4px;
+    z-index: 0;
+    position: absolute;
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-color: #1698D9;
+    width: 320px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(42px 0%, 100% 0, 100% 30px, 100% 100%, 0% 100%, 0 42px);
+    border-radius: 3.5%;
+    cursor: pointer;
+}
+
+.product:hover+.productBorder {
+    top: -4px;
+    left: -4px;
+    z-index: 0;
+    position: absolute;
+    background-size: 328px;
+    background-repeat: no-repeat;
+    background-color: #2EA8E6;
+    width: 320px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(42px 0%, 100% 0, 100% 30px, 100% 100%, 0% 100%, 0 42px);
+    border-radius: 3.5%;
+}
+
+p {
+    margin: 0;
+}
+
+.product__description {
+    color: #666666;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.product__name {
+    font-family: 'trebuchet_ms_bold';
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    position: relative;
+}
+
+.product__taste {
+    font-family: 'trebuchet_ms_bold';
+    color: black;
+    font-size: 24px;
+    font-style: bold;
+    margin-bottom: 16px;
+}
+
+.product__text {
+    color: #666666;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.product__weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: white;
+    z-index: 4;
+    background-color: #1698D9;
+    cursor: pointer;
+}
+
+.product:hover>.product__weight {
+    background-color: #2EA8E6;
+}
+
+
+.product__img {
+    background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 3%;
+}
+
+.product__img::before {
+    content: '';
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 3%;
+}
+
+.product__img.standart::before {
+    background-image: url(./../../images/products/standart.png);
+}
+
+.weight {
+    font-size: 42px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.weightText {
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.textUnderProduct {
+    display: flex;
+    color: white;
+    font-size: 12.8px;
+    line-height: 95%;
+    justify-content: center;
+
+}
+
+.product.notAvailable {
+    cursor: auto;
+}
+
+.product.notAvailable .product__description {
+    opacity: 0.25;
+}
+
+.product.notAvailable .product__name {
+    opacity: 0.13;
+}
+
+.product.notAvailable .product__taste {
+    opacity: 0.13;
+}
+
+.product.notAvailable .product__text {
+    opacity: 0.25;
+}
+
+.product.notAvailable .product__weight {
+    background-color: #B3B3B3;
+}
+
+.product.notAvailable .product__img::before {
+    opacity: 0.5;
+}
+
+.product.notAvailable:hover+.productBorder {
+    background-color: #B3B3B3;
+}
+
+.productContainer.selected .productBorder,
+.productContainer.selected .product__weight {
+    background-color: #D91667;
+}
+
+.productContainer.selected:hover .productBorder,
+.productContainer.selected:hover .product__weight {
+    background-color: #E52E7A;
+}
+
+.grey {
+    background-color: #B3B3B3;
+    cursor: none;
+}
+
+.grey:hover {
+    background-color: #B3B3B3;
+}
+
+.yellowText {
+    color: #FFFF66;
+}
+
+.pinkText {
+    color: #E52E7A;
+}
+
+.blueText {
+    color: #1698D9;
+    cursor: pointer;
+    border-bottom: dashed 1px #1698D9;
+    margin-left: 3px;
+}
+
+.blueText:hover {
+    color: #22A7E9;
+    cursor: pointer;
+    border-bottom: dashed 1px #22A7E9;
+}
